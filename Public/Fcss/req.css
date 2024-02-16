@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    
+}
+::-webkit-scrollbar{
+width: 10px;
+}
+::-webkit-scrollbar-thumb{
+background: #17A0BB;
+}
+::-webkit-scrollbar-track{
+background: #fff;
+}
+::-webkit-scrollbar-track:hover{
+background: #f6f4e5;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #ffffff;
+}
+
+
+.web_header{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 99999;
+    padding: 10px 2px;
+    /* background-color: #ffbf00; */
+    background-color: rgb(245, 245, 245, 1);
+    border-radius: 10px;
+}
+.web_header_d{
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_icon{
+    height: 35px;
+    width: 160px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+.nev{
+    height: 40px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bo{
+    position: relative;
+    height: 40px;
+    width: 100px; 
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7ch;   
+    background-color: rgb(241, 241, 241);
+    transition: 0.1s ease-in-out; 
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.bo:visited{
+    color: #000000;
+}
+.bo:active{
+    transform: scale(0.96);
+    color: #000000;
+}
+a{
+  color: #000000;
+}
+.bo:before,
+.bo:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.bo:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #800000 20%, transparent 30%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #800000 15%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.bo:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #800000 15%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%),
+    radial-gradient(circle, #800000 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+/* .bo:hover{} */
+
+.bo:nth-child(4){
+    background-color: #ffbf00;
+    width: 130px;
+}
+
